@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/gpmsdb">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+
+		<property name="mappingResources">
+			<list>
+				<value>cn/gpms/vo/User.hbm.xml</value>
+				<value>cn/gpms/vo/Class.hbm.xml</value>
+				<value>cn/gpms/vo/Student.hbm.xml</value>
+				<value>cn/gpms/vo/Tutor.hbm.xml</value>
+				<value>cn/gpms/vo/Apply.hbm.xml</value>
+				<value>cn/gpms/vo/Subject.hbm.xml</value>
+				<value>cn/gpms/vo/TsControl.hbm.xml</value>
+				<value>cn/gpms/vo/GpFile.hbm.xml</value>
+				<value>cn/gpms/vo/Switch.hbm.xml</value>
+				<value>cn/gpms/vo/Grouping.hbm.xml</value>
+				<value>cn/gpms/vo/Answergroup.hbm.xml</value>
+				<value>cn/gpms/vo/GpResults.hbm.xml</value>
+				<value>cn/gpms/vo/Progress.hbm.xml</value>
+				<value>cn/gpms/vo/Node.hbm.xml</value>
+				<value>cn/gpms/vo/Notice.hbm.xml</value>
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="baseDAO" class="cn.gpms.dao.BaseDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+<!-- UserAction -->
+	<bean id="userAction" class="cn.gpms.action.UserAction">
+		<property name="userService" ref="userService" />
+		<property name="switchService" ref="switchService"/>
+		<property name="studentService" ref="studentService" />
+	</bean>
+
+	<bean id="userService" class="cn.gpms.service.impl.UserService">
+		<property name="userDAO" ref="userDAO" />
+	</bean>
+
+	<bean id="userDAO" class="cn.gpms.dao.impl.UserDAO" parent="baseDAO" />
+
+
+<!-- ClassAction -->
+	<bean id="classAction" class="cn.gpms.action.ClassAction">
+		<property name="classService" ref="classService" />
+	</bean>
+
+	<bean id="classService" class="cn.gpms.service.impl.ClassService">
+		<property name="classDAO" ref="classDAO" />
+	</bean>
+
+	<bean id="classDAO" class="cn.gpms.dao.impl.ClassDAO" parent="baseDAO" />
+
+<!-- StudentAction -->
+	<bean id="studentAction" class="cn.gpms.action.StudentAction">
+		<property name="studentService" ref="studentService" />
+		<property name="classService" ref="classService" />
+		<property name="userService" ref="userService" />
+		<property name="tutorService" ref="tutorService" />
+		<property name="applyService" ref="applyService" />
+		<property name="tsControlService" ref="tsControlService" />
+		<property name="subjectService" ref="subjectService"/>
+		<property name="gpFileService" ref="gpFileService"/>
+		<property name="groupingService" ref="groupingService" />
+		<property name="gpResultsService" ref="gpResultsService"/>
+		<property name="progressService" ref="progressService"/>
+		<property name="nodeService" ref="nodeService"/>
+		<property name="noticeService" ref="noticeService"/> 
+	</bean>
+	<bean id="studentService" class="cn.gpms.service.impl.StudentService">
+		<property name="studentDAO" ref="studentDAO" />
+		<property name="applyService" ref="applyService" />
+	</bean>
+	<bean id="studentDAO" class="cn.gpms.dao.impl.StudentDAO" parent="baseDAO" />
+
+<!-- TutorAction -->
+	<bean id="tutorAction" class="cn.gpms.action.TutorAction">
+		<property name="classService" ref="classService" />
+		<property name="userService" ref="userService" />
+		<property name="tutorService" ref="tutorService" />
+		<property name="applyService" ref="applyService" />
+		<property name="studentService" ref="studentService" />
+		<property name="tsControlService" ref="tsControlService" />
+		<property name="subjectService" ref="subjectService" />
+		<property name="gpFileService" ref="gpFileService"/>
+		<property name="gpResultsService" ref="gpResultsService"/>
+		<property name="answergroupService" ref="answergroupService" />
+		<property name="progressService" ref="progressService"/>
+		<property name="nodeService" ref="nodeService"/>
+	</bean>
+	<bean name="tutorService" class="cn.gpms.service.impl.TutorService">
+		<property name="userService" ref="userService" />
+		<property name="studentService" ref="studentService" />
+		<property name="tutorDAO" ref="tutorDAO" />
+		
+	</bean>
+	<bean name="tutorDAO" class="cn.gpms.dao.impl.TutorDAO" parent="baseDAO" />
+
+<!-- ApplyAction -->
+	<bean id="applyAction" class="cn.gpms.action.ApplyAction">
+		<property name="applyService" ref="applyService" />
+		<property name="tutorService" ref="tutorService" />
+		<property name="studentService" ref="studentService" />
+		<property name="classService" ref="classService" />
+
+	</bean>
+	<bean id="applyService" class="cn.gpms.service.impl.ApplyService">
+		<property name="studentService" ref="studentService" />
+		<property name="classService" ref="classService" />
+		<property name="tutorService" ref="tutorService" />
+		<property name="applyDAO" ref="applyDAO" />
+	</bean>
+	<bean id="applyDAO" class="cn.gpms.dao.impl.ApplyDAO" parent="baseDAO" />
+	
+<!-- GpFlieeAction -->
+	<bean id="gpfileAction" class="cn.gpms.action.GpFileActon">
+		<property name="gpFileService" ref="gpFileService"/>
+		<property name="switchService" ref="switchService"/>
+	</bean>
+	<bean name="gpFileService" class="cn.gpms.service.impl.GpFileService">
+		<property name="studentService" ref="studentService" />
+		<property name="userService" ref="userService" />
+		<property name="tutorService" ref="tutorService" />
+		<property name="classService" ref="classService" />
+		<property name="subjectService" ref="subjectService"/>
+		<property name="tsControlService" ref="tsControlService" />
+		<property name="groupingService" ref="groupingService" />
+		<property name="answergroupService" ref="answergroupService"/>
+		<property name="gpResultsService" ref="gpResultsService"/>
+		<property name="gpFileDAO" ref="gpFileDAO"/>
+	</bean>
+	<bean name="gpFileDAO" class="cn.gpms.dao.impl.GpFileDAO" parent="baseDAO"></bean>
+
+<!-- SubjectAction -->
+	<bean id="subjectAction" class="cn.gpms.action.SubjectAction">
+		<property name="subjectService" ref="subjectService" />
+	</bean>
+	<bean name="subjectService" class="cn.gpms.service.impl.SubjectService">
+		<property name="subjectDAO" ref="subjectDAO" />
+	</bean>
+	<bean id="subjectDAO" class="cn.gpms.dao.impl.SubjectDAO" parent="baseDAO" />
+
+<!-- TsControlAction -->
+	<bean id="tsControlAction" class="cn.gpms.action.TsControlAction">
+		<property name="tsControlService" ref="tsControlService" />
+	</bean>
+	<bean id="tsControlService" class="cn.gpms.service.impl.TsControlService">
+		<property name="tsControlDAO" ref="tsControlDAO"></property>
+	</bean>
+	<bean id="tsControlDAO" class="cn.gpms.dao.impl.TsControlDAO"
+		parent="baseDAO">
+	</bean>
+<!-- DownAction -->
+	<bean id="downAction" class="cn.gpms.action.DownAction">
+		<property name="gpFileService" ref="gpFileService" />
+	</bean>
+<!-- AdminAction -->
+	<bean id="adminAction" class="cn.gpms.action.AdminAction">
+		<property name="gpFileService" ref="gpFileService" />
+		<property name="switchService" ref="switchService"/>
+		<property name="answergroupService" ref="answergroupService"/>
+		<property name="classService" ref="classService" />
+		<property name="gpResultsService" ref="gpResultsService"/>
+		<property name="noticeService" ref="noticeService"/>
+	</bean>
+
+<!-- SwitchService -->
+	<bean id="switchService" class="cn.gpms.service.impl.SwitchService">
+		<property name="switchDAO" ref="switchDAO" />
+	</bean>
+	<bean id="switchDAO" class="cn.gpms.dao.impl.SwitchDAO" parent="baseDAO"></bean>
+
+<!-- GroupingAction -->
+	<bean id="groupingAction" class="cn.gpms.action.GroupingAction">
+		<property name="groupingService" ref="groupingService" />
+		<property name="classService" ref="classService" />
+	</bean>
+	<bean id="groupingService" class="cn.gpms.service.impl.GroupingService">
+		<property name="classService" ref="classService" />
+		<property name="studentService" ref="studentService" />
+		<property name="groupingDAO" ref="groupingDAO"/>
+		<property name="answergroupService" ref="answergroupService"/>
+		<property name="tutorService" ref="tutorService" />
+	</bean>
+	<bean id="groupingDAO" class="cn.gpms.dao.impl.GroupingDAO"
+		parent="baseDAO" />
+
+<!-- AnswergroupAction -->
+	<bean id="answergroupAction" class="cn.gpms.action.AnswergroupAction">
+		<property name="answergroupService" ref="answergroupService" />
+		<property name="classService" ref="classService" />
+	</bean>
+	<bean id="answergroupService" class="cn.gpms.service.impl.AnswergroupService">
+		<property name="answergroupDAO" ref="answergroupDAO" />
+	</bean>
+	<bean id="answergroupDAO" class="cn.gpms.dao.impl.AnswergroupDAO"
+		parent="baseDAO" />
+		
+<!-- gpResultAction -->
+	<bean id="gpResultsAction" class="cn.gpms.action.GpResultsAction">
+		<property name="gpResultsService" ref="gpResultsService"/>
+		<property name="classService" ref="classService" />
+	</bean>
+	<bean id="gpResultsService" class="cn.gpms.service.impl.GpResultsService">
+	<property name="studentService" ref="studentService" />
+		<property name="gpResultsDAO" ref="gpResultsDAO"/>
+	</bean>
+	<bean id="gpResultsDAO" class="cn.gpms.dao.impl.GpResultsDAO" parent="baseDAO" />
+	
+<!-- ProgressService -->
+	<bean id="progressService" class="cn.gpms.service.impl.ProgressService">
+		<property name="progressDAO" ref="progressDAO"/>
+	</bean>
+	<bean id="progressDAO" class="cn.gpms.dao.impl.ProgressDAO" parent="baseDAO"/>
+	
+	<bean id="nodeService" class="cn.gpms.service.impl.NodeService">
+	    <property name="nodeDAO" ref="nodeDAO"/>
+	</bean>
+	<bean id="nodeDAO" class="cn.gpms.dao.impl.NodeDAO" parent="baseDAO"/>
+<!-- NoticeAction -->
+    <bean id="noticeAction" class="cn.gpms.action.NoticeAction">
+        <property name="noticeService" ref="noticeService"/> 
+    </bean>	
+	<bean id="noticeService" class="cn.gpms.service.impl.NoticeService">
+	    <property name="noticeDAO" ref="noticeDAO"/>
+	</bean>
+	<bean id="noticeDAO" class="cn.gpms.dao.impl.NoticeDAO" parent="baseDAO"/>
+
+	
+</beans>
+
+
+
+

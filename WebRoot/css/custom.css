@@ -1,0 +1,635 @@
+.Divs {
+	
+	width: 700px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 0.5em;
+	background-color: #EBF4FA;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border: 1px double #999;
+}
+.Divss {
+	width: 712px;
+	margin-left: 10px;
+	border-radius: 0.5em;
+	background-color: #E4E4E4;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border: 1px double #999;
+	height: 60px;
+	text-align: center;
+}
+.DivSS {
+	margin-left: 10px;
+	width: 712px;
+	border-radius: 0.5em;
+	background-color: #E4E4E4;
+	border: 1px double #999;
+	margin-bottom: 10px;
+	text-align: center;
+	margin-top: 10px;
+}
+.fuckPrent {
+	width: 1212px;
+	background-color: #E4E4E4;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: double;
+	border-right-style: double;
+	border-left-style: double;
+	border-top-color: #999;
+	border-right-color: #999;
+	border-left-color: #999;
+	border-radius: 0.5em;
+	border-bottom-width: 1px;
+	border-bottom-style: double;
+	border-bottom-color: #999;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.fuck {
+	width: 1200px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: double;
+	border-right-style: double;
+	border-left-style: double;
+	border-top-color: #999;
+	border-right-color: #999;
+	border-left-color: #999;
+	border-radius: 0.5em;
+	border-bottom-width: 1px;
+	border-bottom-style: double;
+	border-bottom-color: #999;
+	background-color: #EBF4FA;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.selectS {
+	width: 150px;
+}
+
+.Divs_1 {
+	margin-left: 10px;
+}
+.insDiv {
+	width: 250px;
+	text-align: center;
+	border-right-width: 1px;
+	border-right-style: double;
+	border-right-color: #999;
+}
+.subject_fileInput input{
+	width: 80%;
+	height: 25px;
+	border-radius: 0.3em;
+	border: 1px double #999;
+}
+.subject_Text {
+	margin-top: 7px;
+	margin-left: 10px;
+	font-size: 16px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	}
+.subject_Text2 {
+	margin-top: 7px;
+	margin-left: 10px;
+	font-size: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-weight: bolder;
+	}	
+
+.subject_switchS {
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border: 1px double #999;
+	background-color: #E4E4E4;
+	width: 300px;
+	height: 40px;
+	border-radius: 0.5em;
+}
+.insNrDiv {
+	border: 1px double #969;
+}
+.Divs_classS {
+	sdisplay: inline-table;
+	border: 1px double #F6C;
+	text-align: center;
+}
+.Divs_class {
+	display: inline;
+	border: 1px double #6F0;
+}
+.insTd {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-bottom-style: double;
+	height: 50px;
+	font-size: 16px;
+	border-bottom-color: #FFF;
+}
+.claTd {
+	height: 35px;
+}
+.uploadFileDiv {
+	width: 650px;
+	height: 30px;
+	margin-top: 20px;
+	margin-right: 0%;
+	margin-bottom: 0%;
+	margin-left: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: double;
+	border-bottom-color: #FFF;
+}
+.uploadFileDiv input{
+	font-size: 14px;
+	font-weight: bolder;
+	background-color: #FFF;
+	border: 1px double #999;
+	border-radius: 0.2em;
+	}
+.daoruButton {
+	background-color: #CCC;
+	height: 27px;
+	
+	border: 1px double #999;
+	border-radius: 0.2em;
+}
+.role{
+	text-align: center;
+	margin-left: 30ex;
+	border: 1px double #F00;
+	margin-top: 20px;
+}
+.role p{
+	text-align: center;	
+	margin-left: 30px;
+}.Ssubjtct {
+	font-size: 16px;
+}
+.Ssub_remind {
+	font-size: 8px;
+	color: #F00;
+}
+.text {
+	font-size: 20px;
+	font-weight: bolder;
+	color: #69C;
+}
+.select1 {
+	width: 80px;
+	border-radius: 0.3em;
+	border: 1px double #CCCCCC;
+	height: 42px;
+}
+
+.select2 {
+	width: 200px;
+	border-radius: 0.3em;
+	border: 1px double #CCCCCC;
+	height: 42px;
+}
+  .gpProgress {
+	border-radius: 1em;
+	width: 70%;
+	padding: 0%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15%;
+	border: 1.5px double #666;
+	height: 24px;
+}
+  .gpPChildrenHaveColor {
+	width: 12.5%;
+	height: 20px;
+	float: left;
+	text-align: center;
+	background-color: 6caf00;
+}
+  .gpPChildrenHaveColor input{
+	height: 35px;
+	width: 35px;
+	border-radius: 2em;
+	margin-top: -8px;
+	border: 1.5px double #666;
+	background-color: #6caf00;
+	display: inline;
+}
+  .gpPChildrenNoColor {
+	width: 12.5%;
+	height: 20px;
+	float: left;
+	text-align: center;
+}
+  .gpPChildrenNoColor input{
+	height: 35px;
+	width: 35px;
+	border-radius: 2em;
+	margin-top: -8px;
+	border: 1.5px double #666;
+	background-color: #FFFFFF;
+	display: inline;
+
+}
+
+  .gpPFristChildren {
+    border-top-left-radius:1em;
+    border-bottom-left-radius:1em;
+    border-top-right-radius : 1em;
+    border-bottom-right-radius: 1em;
+	width: 12.5%;
+	height: 20px;
+	float: left;
+	text-align: center;
+	
+}
+ .gpPFristChildrenLeft {
+    border-top-left-radius:1em;
+    border-bottom-left-radius:1em;
+	width: 12.5%;
+	height: 20px;
+	float: left;
+	text-align: center;
+	
+}
+
+  .gpPChildrenRight {
+    border-top-right-radius : 1em;
+    border-bottom-right-radius: 1em;
+	width: 12.5%;
+	height: 20px;
+	float: left;
+	text-align: center;
+	background-color: 6caf00;
+}
+
+  .gpPChildrenRight input{
+	height: 35px;
+	width: 35px;
+	border-radius: 2em;
+	margin-top: -8px;
+	border: 1.5px double #666;
+	background-color: #6caf00;
+	display: inline;
+}
+  .gpProgressS {
+	height: 50px;
+	width: 100%;
+	margin-bottom:20px;
+}
+  .gpProgresText {
+	border-radius: 1em;
+	width: 70%;
+	padding: 0%;
+	margin-top: 10px;
+	margin-left: 15%;
+	height: 21px;
+}
+.black_overlay {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: ;
+	z-index: 1001;
+	-moz-opacity: 0.8;
+	opacity: .80;
+	filter: alpha(opacity =     88);
+}
+
+.white_content {
+	display: none;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	width: 400px;
+	height: 450px;
+	border: 2px solid #87AADE;
+	background: -webkit-linear-gradient(top,skyblue,lightblue,white);
+	text-align: center;
+	border-radius: 0.4em;
+	z-index: 1002;
+	overflow: auto;
+	padding-left: 10px;
+}
+
+.inputW50 {
+	width: 250px;
+	height: 40px;
+	border-radius: 0.3em;
+	border: 1px double #999;
+}
+
+.inputW50:focus {
+	border-style: solid;
+	border-color: #03a9f4;
+	box-shadow: 0 0 15px #E4E4E4;
+}
+
+.input2W50 {
+	width: 250px;
+	height: 40px;
+	border-radius: 0.3em;
+	border: 1px double #999;
+	background: #fff url(images/datePicker.gif) no-repeat right;
+}
+
+.input2W50:focus {
+	border-style: solid;
+	border-color: #03a9f4;
+	box-shadow: 0 0 15px##E4E4E4;
+}
+
+.displayNone {
+	margin-top: -15px;
+	display: none;
+}
+
+.displayBlock {
+	margin-top: -15px;
+	display: block;
+}
+
+.element {
+	width: 0px;
+	height: 0px;
+	border-top: 10px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 10px solid #4DA7EA;
+	border-left: 8px solid transparent;
+	margin-left: 45%;
+}
+.element1 {
+	width: 0px;
+	height: 0px;
+	margin-top:-6px;
+	border-top: 10px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 10px solid #4DA7EA;
+	border-left: 8px solid transparent;
+	margin-left: 47%;
+}
+
+.angle-wrapper {
+	position: relative;
+	height: 100px;
+	border: 1px solid #4DA7EA;
+	background-color: #EBF4FA;
+	font-size: 12px;
+	border-radius: 0.2em;
+}
+
+.gpProgresDivSS {
+	width: 1600px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	border: 1px double #999;
+	background-color: #EBF4FA;
+	border-radius: 0.3em;
+}
+
+.gpProgresDivS_1 {
+	width: 100%;
+	height: 47px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-top: 0.3%;
+	text-align: left;
+	border-bottom: 1px double #999;
+	background-color: #EBF4FA;
+	border-top-left-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+}
+
+.element2_1 {
+	width: 1px;
+	height: 10px;
+	margin-top: -17px;
+	background-color: #000000;
+	cursor: pointer;
+}
+
+.element2_2 {
+	width: 1px;
+	height: 10px;
+	margin-top: -17px;
+	margin-left: 65%;
+}
+
+.wrapperS {
+	margin-bottom:20px;
+	width: 100%;
+	height: 145px;
+	padding-top: 8px;
+	border-top: 1px double darkgray;
+}
+
+.wrapper1 {
+	width: 9%;
+	height: 100%;
+	margin-left: 10px;
+	text-align: left;
+	float: left;
+}
+
+.wrapper2 {
+	width: 150px;
+	float: left;
+}
+
+.progressbarMaskS{
+
+margin-top: -32px;
+margin-left: 1%;
+float: left;
+}
+
+.progressbarMask {
+	width: 100%;
+	height: 32px;
+	margin-top:-30px;
+	text-align:center;
+	font-weight: bolder;
+	margin-left: 1%;
+}
+
+.progressbar {
+	border-radius: 2em;
+	top: 50%;
+	left: 50%;
+	height: 30px;
+	margin-top:60px;
+	border: 2px solid #000000;
+}
+
+.progressbar2 {
+	width: 200px;
+	height: 150px;
+margin-left: 1%;
+float: left;
+}
+
+.progressbar2_topChildren {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.progressbar2_topChildren span {
+	font-size: 14px;
+	font-weight: normal;
+}
+.progressbar3{
+width: 1260px;
+height: 150px;
+float: left;
+}
+
+.bottom{
+width: 1260px;
+height: 21px;
+margin-top: 2.5px;
+}
+
+.scale{
+width: 20px;
+height:100%;
+margin-top:0.5px;
+float: left;
+}
+
+/*在进度条元素上调用动画*/
+.fill {
+	border-radius: 1em;
+	height: 100%;
+	background-color: #6caf00;
+}
+
+.updateNodeS{
+ width: 200px;
+ height: 300px;
+}
+.textarea{
+width: 250px;
+height: 250px;
+border-radius: 0.3em;
+resize:none;
+border: 1px double #999;
+}
+.list_textarea{
+width: 250px;
+height: 250px;
+border-radius: 0.3em;
+resize:none;
+border: 1px double #999;
+background-color:transparent;border:0;
+}
+.textarea:focus {
+	border-style: solid;
+	border-color: #03a9f4;
+	box-shadow: 0 0 15px #E4E4E4;
+}
+
+.nodeList{
+width: 320px;
+height: 350px;
+
+display: none;
+position:absolute;
+}
+.nodeList1{
+width:100%;
+height:93.5%;
+border: 1px double #4DA7EA;
+padding-left: 10px;
+background: -webkit-linear-gradient(top,#4DA7EA,#D7CADF,#F1E6DE);
+border-radius: 0.3em;
+}
+.noticeSS{
+background-color: #EBF4FA;
+margin-left: 10px;
+border-radius: 0.5em;
+border: 1px double #999;
+padding-left: 10px;
+padding-top: 20px;
+width: 910px;
+margin-bottom: 20px;
+}
+.noticeS{
+margin-top: 15px;
+margin-left:30px;
+margin-bottom: 15px;
+font-size: 16px;;
+}
+.noticeS1{
+margin-top: 15px;
+margin-bottom: 15px;
+font-size: 16px;;
+}
+.noticeS input{
+width: 600px;
+height: 35px;
+border-radius: 0.2em;
+border: 1px double #999;
+}
+.noticeS textarea{
+width: 800px;
+height: 500px;
+border-radius: 0.2em;
+border: 1px double #999;
+resize:none;
+}
+.notice1 {
+float: left;
+padding-top: 6px;
+}
+.noticeRadio{
+float: left;
+}
+.noticeSubmit{
+padding-left: 300px;
+}
+.updateS{
+width: 430px;
+height:300px;
+margin-left: 15px;
+margin-top:10px;
+margin-bottom:10px;
+border: 1px double #999;
+padding-top: 20px;
+border-radius: 0.3em;
+background-color: #EBF4FA;
+}
+.update1S{
+height:40px;
+margin-bottom: 15px;
+font-size: 14px;
+}
+.update1{
+width:80px;
+float: left;
+margin-left: 10px;
+text-align: right;
+margin-top: 10px;
+}
+.updatePwdRemind{
+padding-top:12px;
+color: #F00;
+font-size: 8px;
+}

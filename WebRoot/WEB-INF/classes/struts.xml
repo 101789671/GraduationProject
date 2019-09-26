@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="access" namespace="/system" extends="struts-default">
+		<action name="Access_*" class="userAction" method="{1}">
+			<result name="admin">/WEB-INF/view/admin/index.jsp</result>
+			<result name="tutor">/WEB-INF/view/tutor/index.jsp</result>
+			<result name="student">/WEB-INF/view/student/index.jsp</result>
+			<result name="error">/login.jsp</result>
+			<result name="logout">/login.jsp</result>
+			<result name="toUpdatePwd">/WEB-INF/view/comm/password_update.jsp</result>
+		</action>
+		<action name="Class_*" class="classAction" method="{1}">
+			<result name="success">/WEB-INF/view/admin/class_relist.jsp</result>
+			<result name="listclass">/WEB-INF/view/admin/class_list.jsp</result>
+			<result name="toadd">/WEB-INF/view/admin/class_add.jsp</result>
+			<result name="toUpdataclass">/WEB-INF/view/admin/class_updata.jsp</result>
+			<result name="listclass2">/WEB-INF/view/admin/class_list2.jsp</result>
+		</action>
+		<action name="Student_*" class="studentAction" method="{1}">
+			<result name="toaddStu">/WEB-INF/view/admin/student_add.jsp</result>
+			<result name="toupdateStu">/WEB-INF/view/admin/student_update.jsp</result>
+			<result name="toChoiceTut">/WEB-INF/view/admin/choiceTut_list.jsp</result>
+			<result name="relistStu">/WEB-INF/view/admin/student_relist.jsp</result>
+			<result name="listStu">/WEB-INF/view/admin/student_list.jsp</result>
+		</action>
+		<action name="Tutor_*" class="tutorAction" method="{1}">
+			<result name="toaddTutor">/WEB-INF/view/admin/tutor_add.jsp</result>
+			<result name="tutorlist">/WEB-INF/view/admin/tutor_list.jsp</result>
+			<result name="toupdateTu">/WEB-INF/view/admin/tutor_update.jsp</result>
+		</action>
+		<action name="Apply_*" class="applyAction" method="{1}">
+			<result name="toAllotApply">/WEB-INF/view/admin/allotApply_list.jsp</result>
+			<result name="toAllotCT">/WEB-INF/view/admin/allotCT_add.jsp</result>
+			<result name="toChoiceTut">/WEB-INF/view/admin/choiceTut_list.jsp</result>
+			<result name="recordCDlist">/WEB-INF/view/admin/record_CDlist.jsp</result>
+		</action>
+		<action name="File_*" class="gpfileAction" method="{1}">
+			<result name="success">/login.jsp</result>
+			<result name="relistStu">/WEB-INF/view/admin/student_relist.jsp</result>
+			<result name="tutorlist">/WEB-INF/view/admin/tutor_list.jsp</result>
+			<result name="reclassList">/WEB-INF/view/admin/class_relist.jsp</result>
+			<result name="subjectlist">/WEB-INF/view/tutor/subject_list.jsp</result>
+			<result name="toMyTp">/WEB-INF/view/student/thesisProposal.jsp</result>
+			<result name="toMyPaper">/WEB-INF/view/student/paper.jsp</result>
+			<result name="toMyWorks">/WEB-INF/view/student/works.jsp</result>
+			<result name="myjsp2">/comm/onlineReading.jsp</result>
+			<result name="listGrouping">/WEB-INF/view/admin/grouping_list.jsp</result>
+			<result name="listGpResults">/WEB-INF/view/admin/gpResults_list.jsp</result>
+		</action>
+		<action name="Subject_*" class="subjectAction" method="{1}">
+			<result name="subjectlist">/WEB-INF/view/tutor/subject_list.jsp</result>
+			<result name="error">/WEB-INF/view/tutor/subject_add.jsp</result>
+			<result name="toUpdataSubject">/WEB-INF/view/tutor/subject_update.jsp</result>
+		</action>
+		<action name="grouping_*" class="groupingAction" method="{1}">
+			<result name="toAnswerGrouping">/WEB-INF/view/admin/grouping_add.jsp</result>
+			<result name="listGrouping">/WEB-INF/view/admin/grouping_list.jsp</result>
+			<result name="toUpdateGrouping">/WEB-INF/view/admin/grouping_update.jsp</result>
+		</action>
+		<action name="answergroup_*" class="answergroupAction" method="{1}">
+			<result name="toUpdateAnswergroup">/WEB-INF/view/admin/answergroup_update.jsp</result>
+			<result name="toAnswerGroup">/WEB-INF/view/admin/answerGroup_list.jsp</result>
+			<result name="listAnswerGroup">/WEB-INF/view/admin/answerGroup_list.jsp</result>
+		</action>
+		<action name="gpResults_*" class="gpResultsAction" method="{1}">
+			<result name="listGpResults">/WEB-INF/view/admin/gpResults_list.jsp</result>
+		</action>
+		<action name="Notice_*" class="noticeAction" method="{1}">
+			<result name="listNoticeAll">/WEB-INF/view/comm/notice_list.jsp</result>
+			<result name="noticeDetails">/WEB-INF/view/comm/notice_details.jsp</result>
+			<result name="toUpdateNotice">/WEB-INF/view/comm/notice_update.jsp</result>
+			<result name="toReleaseNotice">/WEB-INF/view/comm/notice_add.jsp</result>
+		</action>
+	</package>
+
+	<package name="admin" namespace="/admin" extends="struts-default">
+		<action name="Admin_*" class="adminAction" method="{1}">
+			<result name="studentMoreTP">/WEB-INF/view/admin/studentMoreTP_list.jsp</result>
+			<result name="studentMorePA">/WEB-INF/view/admin/studentMorePA_list.jsp</result>
+			<result name="studentMoreWO">/WEB-INF/view/admin/studentMoreWO_list.jsp</result>
+			<result name="toStudentTPSurvey">/WEB-INF/view/admin/studentTPSurvey_list.jsp</result>
+			<result name="toStudentPASurvey">/WEB-INF/view/admin/studentPASurvey_list.jsp</result>
+			<result name="toStudentWOSurvey">/WEB-INF/view/admin/studentWOSurvey_list.jsp</result>
+			<result name="toSystemSwitch">/WEB-INF/view/admin/systemSwitch.jsp</result>
+			<result name="toAddGrouping">/WEB-INF/view/admin/grouping_add.jsp</result>
+			<result name="toAnswerGroup">/WEB-INF/view/admin/answerGroup_list.jsp</result>
+			<result name="toResultsAdd">/WEB-INF/view/admin/gpResults_add.jsp</result>
+			<result name="listGpResults">/WEB-INF/view/admin/gpResults_list.jsp</result>
+			<result name="toUpdateGpResults">/WEB-INF/view/admin/gpResults_update.jsp</result>
+			<result name="toReleaseNotice">/WEB-INF/view/admin/notice_add.jsp</result>
+		</action>
+	</package>
+
+	<package name="stu" namespace="/stu" extends="struts-default">
+		<action name="Student_*" class="studentAction" method="{1}">
+			<result name="toChoiceTutor">/WEB-INF/view/student/chioce_tutor.jsp</result>
+			<result name="toChoiceSubject">/WEB-INF/view/student/chioce_subject.jsp</result>
+			<result name="CTlist">/WEB-INF/view/student/chioce_tutorlist.jsp</result>
+			<result name="CSlist">/WEB-INF/view/student/chioce_subjectlist.jsp</result>
+			<result name="mytutorlist">/WEB-INF/view/student/mytutor_list.jsp</result>
+			<result name="mysubjectlist">/WEB-INF/view/student/mysubject_list.jsp</result>
+			<result name="toMyTp">/WEB-INF/view/student/thesisProposal.jsp</result>
+			<result name="toMyPaper">/WEB-INF/view/student/paper.jsp</result>
+			<result name="toMyWorks">/WEB-INF/view/student/works.jsp</result>
+			<result name="myAnswergroup">/WEB-INF/view/student/grouping_list.jsp</result>
+			<result name="myGpResults">/WEB-INF/view/student/gpResults_list.jsp</result>
+			<result name="listGrouping">/WEB-INF/view/student/grouping_morelist.jsp</result>
+			<result name="myProgres">/WEB-INF/view/student/myProgres.jsp</result>
+			<result name="toReleaseNotice">/WEB-INF/view/tutor/notice_add.jsp</result>
+			<result name="listNoticeAll">/WEB-INF/view/student/notice_list.jsp</result>
+			<result name="personalData">/WEB-INF/view/student/personalData_list.jsp</result>
+		</action>
+	</package>
+	<package name="tut" namespace="/tut" extends="struts-default">
+		<action name="Tutor_*" class="tutorAction" method="{1}">
+			<result name="exaCT">/WEB-INF/view/tutor/examine_CTlist.jsp</result>
+			<result name="exaCS">/WEB-INF/view/tutor/examine_CSlist.jsp</result>
+			<result name="studentlist">/WEB-INF/view/tutor/student_list.jsp</result>
+			<result name="recordCTlist">/WEB-INF/view/tutor/record_CTlist.jsp</result>
+			<result name="toaddSubject">/WEB-INF/view/tutor/subject_add.jsp</result>
+			<result name="toUpdateStudentSub">/WEB-INF/view/tutor/studentSub_update.jsp</result>
+			<result name="studentMoreTP">/WEB-INF/view/tutor/studentMoreTP_list.jsp</result>
+			<result name="studentMorePA">/WEB-INF/view/tutor/studentMorePA_list.jsp</result>
+			<result name="studentMoreWO">/WEB-INF/view/tutor/studentMoreWO_list.jsp</result>
+			<result name="toStudentTPSurvey">/WEB-INF/view/tutor/studentTPSurvey_list.jsp</result>
+			<result name="toStudentPASurvey">/WEB-INF/view/tutor/studentPASurvey_list.jsp</result>
+			<result name="toStudentWOSurvey">/WEB-INF/view/tutor/studentWOSurvey_list.jsp</result>
+			<result name="myStudentGpResults">/WEB-INF/view/tutor/gpResults_list.jsp</result>
+			<result name="listGpResults">/WEB-INF/view/tutor/gpResults_morelist.jsp</result>
+			<result name="myAnserGroup">/WEB-INF/view/tutor/answerGroup_list.jsp</result>
+			<result name="listAnswerGroup">/WEB-INF/view/tutor/answerGroup_morelist.jsp</result>
+			<result name="toReleaseNotice">/WEB-INF/view/tutor/notice_add.jsp</result>
+			<result name="toStudentPregress">/WEB-INF/view/tutor/studentProgres.jsp</result>
+			<result name="personalData">/WEB-INF/view/tutor/personalData_list.jsp</result>
+		</action>
+		<action name="TsControl_*" class="tsControlAction" method="{1}">
+		</action>
+	</package>
+
+	<package name="sub" namespace="/sub" extends="struts-default">
+		<action name="Subject_*" class="subjectAction" method="{1}">
+			<result name="subjectlist">/WEB-INF/view/tutor/subject_list.jsp</result>
+			<result name="error">/WEB-INF/view/tutor/subject_add.jsp</result>
+			<result name="toUpdataSubject">/WEB-INF/view/tutor/subject_update.jsp</result>
+		</action>
+	</package>
+	
+	
+	
+	<package name="fileupload" namespace="/download" extends="struts-default">
+		<action name="download_*" class="gpfileAction" method="{1}">
+
+			<!-- 1.列表展示 -->
+			<result name="list">/fileupload/list.jsp</result>
+
+			<!-- 2.下载操作 -->
+			<result name="download" type="stream">
+
+				<!-- 调用action中返回流的方法 -->
+				<!-- 允许下载的文件类型：此处指定为所有的二进制文件类型 在tomacat的conf/web.xml中找exe对应的<mime-type> -->
+				<param name="contentType">application/octet-stream</param>
+
+				<!-- 对应Action中的属性：就是返回流的属性【其实就是getAttrInputStream()中的attrInputStream】 -->
+				<param name="inputName">attrInputStream</param>
+
+				<!-- 下载头，包括：浏览器显示的文件名 filename=${downFileName}这不是el表达式， el表达式仅能用于jsp，这是struts在配置文件中的取值符号 -->
+				<param name="contentDisposition">attachment;filename=${downFileName}</param>
+
+				<!-- 缓冲区大小设置 -->
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>
+
+
+
+</struts>
